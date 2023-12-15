@@ -4,7 +4,7 @@ import com.dyma.tennis.Player;
 import com.dyma.tennis.PlayerList;
 import com.dyma.tennis.PlayerToSave;
 import com.dyma.tennis.Rank;
-import com.dyma.tennis.repository.PlayerRepository;
+import com.dyma.tennis.data.PlayerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -2,7 +2,7 @@ package com.dyma.tennis.service;
 
 import com.dyma.tennis.ApplicationStatus;
 import com.dyma.tennis.HealthCheck;
-import com.dyma.tennis.repository.HealthCheckRepository;
+import com.dyma.tennis.data.HealthCheckRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
