@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -31,10 +32,16 @@ public class PlayerService {
     }
 
     public Player getByLastName(String lastName) {
-        return PlayerList.ALL.stream()
-                .filter(player -> player.lastName().equals(lastName))
-                .findFirst()
-                .orElseThrow(() -> new PlayerNotFoundException(lastName));
+        Optional<com.dyma.tennis.repository.Player> player = playerRepository.findOneByLastNameIgnoreCase(lastName);
+        if(player.isEmpty()) {
+            throw new PlayerNotFoundException(lastName);
+        }
+        return new Player(
+                player.get().getFirstName(),
+                player.get().getLastName(),
+                player.get().getBirthDate(),
+                new Rank(player.get().getRank(), player.get().getPoints())
+        );
     }
 
     public Player create(PlayerToSave playerToSave) {
