@@ -32,8 +32,8 @@ public class PlayerService {
     }
 
     public Player getByLastName(String lastName) {
-        Optional<com.dyma.tennis.repository.Player> player = playerRepository.findOneByLastNameIgnoreCase(lastName);
-        if(player.isEmpty()) {
+        Optional<com.dyma.tennis.data.Player> player = playerRepository.findOneByLastNameIgnoreCase(lastName);
+        if (player.isEmpty()) {
             throw new PlayerNotFoundException(lastName);
         }
         return new Player(
