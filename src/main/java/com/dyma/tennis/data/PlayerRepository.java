@@ -1,4 +1,4 @@
-package com.dyma.tennis.repository;
+package com.dyma.tennis.data;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

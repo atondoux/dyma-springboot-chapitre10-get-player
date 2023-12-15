@@ -1,4 +1,4 @@
-package com.dyma.tennis.repository;
+package com.dyma.tennis.data;
 
 import jakarta.persistence.EntityManager;
 import org.springframework.beans.factory.annotation.Autowired;

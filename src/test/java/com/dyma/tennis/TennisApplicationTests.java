@@ -1,6 +1,6 @@
 package com.dyma.tennis;
 
-import com.dyma.tennis.repository.HealthCheckRepository;
+import com.dyma.tennis.data.HealthCheckRepository;
 import com.dyma.tennis.service.HealthCheckService;
 import com.dyma.tennis.web.HealthCheckController;
 import org.assertj.core.api.Assertions;
