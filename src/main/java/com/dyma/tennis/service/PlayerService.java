@@ -4,6 +4,7 @@ import com.dyma.tennis.Player;
 import com.dyma.tennis.PlayerList;
 import com.dyma.tennis.PlayerToSave;
 import com.dyma.tennis.Rank;
+import com.dyma.tennis.data.PlayerEntity;
 import com.dyma.tennis.data.PlayerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,7 +33,7 @@ public class PlayerService {
     }
 
     public Player getByLastName(String lastName) {
-        Optional<com.dyma.tennis.data.Player> player = playerRepository.findOneByLastNameIgnoreCase(lastName);
+        Optional<PlayerEntity> player = playerRepository.findOneByLastNameIgnoreCase(lastName);
         if (player.isEmpty()) {
             throw new PlayerNotFoundException(lastName);
         }
