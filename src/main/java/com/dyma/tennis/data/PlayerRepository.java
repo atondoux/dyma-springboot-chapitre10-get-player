@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface PlayerRepository extends JpaRepository<Player, Long> {
-    Optional<Player> findOneByLastNameIgnoreCase(String lastName);
+public interface PlayerRepository extends JpaRepository<PlayerEntity, Long> {
+    Optional<PlayerEntity> findOneByLastNameIgnoreCase(String lastName);
 }
